@@ -22,22 +22,27 @@
         <email>pinepain@gmail.com</email>
         <active>yes</active>
     </developer>
-    <date>2020-04-05</date>
-    <time>17:41:44</time>
+    <date>2021-02-21</date>
+    <time>01:42:50</time>
     <version>
-        <release>1.10.3dev</release>
-        <api>1.10.3dev</api>
+        <release>1.10.3</release>
+        <api>1.10.3</api>
     </version>
     <stability>
-        <release>devel</release>
-        <api>devel</api>
+        <release>stable</release>
+        <api>stable</api>
     </stability>
     <license uri="http://www.php.net/license">PHP License</license>
-    <notes><![CDATA[
+    <notes><![CDATA[- More work for PHP 8 (Remi Collet <remi@remirepo.net>) (https://github.com/php-amqp/php-amqp/issues/383)
+ - Add build support for PHP8.0 (mmokhi <mokhi64@gmail.com>) (https://github.com/php-amqp/php-amqp/issues/381)
+ - Windows build: alternatively check \include\librabbitmq for amqp.h (Jan Ehrhardt <github@ehrhardt.nl>) (https://github.com/php-amqp/php-amqp/issues/375)
+ - Use latests PHP versions for AppVeyor instead of .0 (Christoph M. Becker <cmbecker69@gmx.de>) (https://github.com/php-amqp/php-amqp/issues/374)
+ - Fix #372: AppVeyor: Builds are failing but still show up as successful (Christoph M. Becker <cmbecker69@gmx.de>) (https://github.com/php-amqp/php-amqp/issues/373)
+ - Add AppVeyor CI support (closes #369) (Christoph M. Becker <cmbecker69@gmx.de>) (https://github.com/php-amqp/php-amqp/issues/370)
+ - Better test suite isolation, ignore local ini settings (Lars Strojny <lars.strojny@internations.org>) (https://github.com/php-amqp/php-amqp/issues/371)
 
 For a complete list of changes see:
-https://github.com/pdezwart/php-amqp/compare/v1.10.2...master
-]]></notes>
+https://github.com/php-amqp/php-amqp/compare/v1.10.2...v1.10.3]]></notes>
     <contents>
         <dir name="/">
             <file name="config.m4" role="src"/>
@@ -230,6 +235,7 @@ https://github.com/pdezwart/php-amqp/compare/v1.10.2...master
             <file name="tests/amqpqueue_unbind_basic_headers_arguments.phpt" role="test"/>
             <file name="tests/amqpqueue_var_dump.phpt" role="test"/>
             <file name="tests/amqptimestamp.phpt" role="test"/>
+            <file name="tests/amqptimestamp_php8.phpt" role="test"/>
             <file name="tests/bug_17831.phpt" role="test"/>
             <file name="tests/bug_19707.phpt" role="test"/>
             <file name="tests/bug_19840.phpt" role="test"/>
